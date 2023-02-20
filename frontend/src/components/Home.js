@@ -13,41 +13,40 @@ const Home = () => {
         <div className="bg"></div>
         <h1>Disease Prediction <br />System</h1>
         <p>3 Step Disease Prediction App</p>
-        {/* <img src={bg} alt="" /> */}
       </header>
       <div className="section">
         <h2>
           Select The Category
         </h2>
         <div id="DiseaseMenu">
-          <Link to="/diabetes">
+          <Link to="/heart">
             <div className="disease-menu">
               <img id="img" alt="some" src={heart} />
-              <h1>Heart Disease Pridiction</h1>
+              <h1>Heart Disease Prediction</h1>
             </div>
           </Link>
-          <Link to="/diabetes">
+          <Link to="/liver">
             <div className="disease-menu">
               <img id="img" src={liver} alt="some"/>
-              <h1>Liver Disease Pridiction</h1>
+              <h1>Liver Disease Prediction</h1>
             </div>
           </Link>
-          <Link to="/diabetes">
+          <Link to="/kidney">
             <div className="disease-menu">
               <img id="img" src={kidney} alt="some"/>
-              <h1>Kidney Disease Pridiction</h1>
+              <h1>Kidney Disease Prediction</h1>
             </div>
           </Link>
           <Link to="/diabetes">
             <div className="disease-menu">
               <img id="img" src={diabetes} alt="some"/>
-              <h1>Diabetes Disease Pridiction</h1>
+              <h1>Diabetes Disease Prediction</h1>
             </div>
           </Link>
           <Link to="/diabetes">
             <div className="disease-menu">
               <img id="img" src={cancer} alt="some"/>
-              <h1>Cancer Disease Pridiction</h1>
+              <h1>Cancer Disease Prediction</h1>
             </div>
           </Link>
         </div>

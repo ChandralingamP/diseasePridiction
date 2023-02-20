@@ -3,10 +3,10 @@ import random
 import base64
 def getPieChart(res):
     if(res == 1):
-        val =  random.uniform(5,25)
+        val =  random.uniform(5,30)
         return [["YES","NO"],[100-val,val]]
     else:
-        val = random.uniform(5,25)
+        val = random.uniform(5,30)
         return [["No","Yes"],[100-val,val]]
 
 
@@ -29,4 +29,5 @@ def getFinalResult(res):
     # img_file.write(decoded_data)
     # # img_file.close()
     return [res,my_string,arr[1][0]]
+    # return [res,arr[1][0]]
 

@@ -4,7 +4,7 @@ import "./diabetes.css";
 import {useNavigate} from 'react-router-dom';
 function Diabetes() {
   const navigate = useNavigate();
-  const [Pregnancies, setPregnancies] = useState("");
+  const [Pregnancy, setPregnancy] = useState("");
   const [Glucose, setGlucose] = useState("");
   const [BloodPressure, setBloodPressure] = useState("");
   const [SkinThickness, setSkinThickness] = useState("");
@@ -12,13 +12,11 @@ function Diabetes() {
   const [BMI, setBMI] = useState("");
   const [DiabetesPedigreeFunction, setDiabetesPedigreeFunction] = useState("");
   const [Age, setAge] = useState("");
-  // { "Pregnancies": Pregnancies, "Glucose": Glucose, "BloodPressure": BloodPressure, "SkinThickness": SkinThickness, "Insulin": Insulin, "BMI": BMI, "DiabetesPedigreeFunction": DiabetesPedigreeFunction, "Age": Age }
-  // { "Pregnancies": 2, "Glucose": 146, "BloodPressure": 72.405, "SkinThickness": 29.15342, "Insulin": 155.54822, "BMI": 27.5, "DiabetesPedigreeFunction": 0.240, "Age": 28.0 }
   function submitH() {
     const options = {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({"Pregnancies":2,"Glucose":146,"BloodPressure":72.405,"SkinThickness":29.15342,"Insulin":155.54822,"BMI":27.5,"DiabetesPedigreeFunction":0.24,"Age":28})
+      body: JSON.stringify({ "Pregnancy": Pregnancy, "Glucose": Glucose, "BloodPressure": BloodPressure, "SkinThickness": SkinThickness, "Insulin": Insulin, "BMI": BMI, "DiabetesPedigreeFunction": DiabetesPedigreeFunction, "Age": Age })
     };
     fetch('/api/diabetes', options)
       .then(response => response.json())
@@ -30,8 +28,8 @@ function Diabetes() {
       <h1>Enter The Following Details...</h1>
       <form className='form' >
         <Form.Group>
-          <Form.Label>Pregnancies</Form.Label>
-          <Form.Control type="text" value={Pregnancies} name="Pregnancies" onChange={(e) => setPregnancies(e.target.value)} placeholder="pregnancie count" />
+          <Form.Label>Pregnancy</Form.Label>
+          <Form.Control type="text" value={Pregnancy} name="Pregnancy" onChange={(e) => setPregnancy(e.target.value)} placeholder="pregnancie count" />
         </Form.Group>
         <br />
         <Form.Group>
