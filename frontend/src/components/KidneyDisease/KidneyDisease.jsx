@@ -59,6 +59,7 @@ function Kidney() {
             peda_edema,
             aanemia,],
         disease : 'kidney'
+        
       }),
     };
     fetch("/predict", options)

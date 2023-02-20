@@ -18,7 +18,7 @@ function Diabetes() {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ "Pregnancy": Pregnancy, "Glucose": Glucose, "BloodPressure": BloodPressure, "SkinThickness": SkinThickness, "Insulin": Insulin, "BMI": BMI, "DiabetesPedigreeFunction": DiabetesPedigreeFunction, "Age": Age })
     };
-    fetch('/api/diabetes', options)
+    fetch('/predict', options)
       .then(response => response.json())
       .then(response => { console.log(response) ;navigate("/result");})
       .catch(err => console.error(err));
