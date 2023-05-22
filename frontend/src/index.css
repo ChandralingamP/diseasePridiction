@@ -54,7 +54,7 @@ header > img{
   width: 50%;
   height: 12vh;
   overflow: hidden;
-  margin: 20px auto;
+  margin: 0px auto;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -79,4 +79,8 @@ header > img{
   height: 100%;
   position: relative;
   left:64%;
+} */
+/* 
+.section{
+  background-image: url('./Assests/bg.jpg');
 } */

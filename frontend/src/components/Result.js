@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
-let image; 
+let image;
 function Result() {
     let [result, setResult] = useState('0');
     let [val, setVal] = useState('0');
     let [flag,setFlag] = useState(false);
      useEffect(() => {
         console.log("Result page");
+        axios.get("/user").then(data => data.data).then((data)=>console.log(data))
         axios.get("/predict").then((response) => {
             setResult(response.data.result);
             setVal(response.data.value);
@@ -14,7 +15,7 @@ function Result() {
             image = response.data.image;
             setFlag(true);
         })
-    }, [])
+    }, []);
     return (
         <div>
             <div className="result" >
